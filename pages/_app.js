@@ -1,7 +1,43 @@
-import '../styles/globals.css'
+import { useState, useEffect } from "react";
+import { AnimatePresence } from 'framer-motion'
+import GlobalStyle from "@/theme/GlobalStyle";
+import { ThemeProvider } from 'next-themes';
+import { Header } from "../components"
 
-function MyApp({ Component, pageProps }) {
-  return <Component {...pageProps} />
+
+function Portfolio({ Component, pageProps, router }) {
+	const url = `https://stg.sh/${router.route}`;
+
+
+
+	useEffect(() => {
+	
+
+		if (typeof window !== "undefined") {
+			const WebFont = require("webfontloader");
+
+			WebFont.load({
+				google: {
+					families: [`Roboto:300,400,500,700`]
+				}
+			});
+		}
+
+	}, []);
+
+
+	return (
+		<>
+			<ThemeProvider>
+				<GlobalStyle />
+					<Header />
+					<AnimatePresence exitBeforeEnter initial={false} onExitComplete={() => window.scrollTo(0, 0)}>
+						<Component {...pageProps} canonical={url} key={url} />
+					</AnimatePresence>
+			</ThemeProvider>
+		</>
+	);
 }
 
-export default MyApp
+
+export default Portfolio
