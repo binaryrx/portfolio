@@ -125,11 +125,7 @@ export const StyledProject = styled.li`
             object-fit: cover;
             object-position: left;
            
-
-           
         }
-
-        
 
         
     }

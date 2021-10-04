@@ -6,7 +6,7 @@ import { mqSm, mqMd, mqLg } from "@/theme/styleVars";
 export const Link = styled.a`
 
     img{
-        width: 2rem;
+        width: 1.75rem;
         height: auto;
     }
 `;

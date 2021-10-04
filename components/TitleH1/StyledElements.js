@@ -12,7 +12,7 @@ export const StyledH1 = styled.h1`
     }
 
     @media ${mqSm} {
-        font-size: 2.15rem;
+        font-size: 2rem;
     }
     
     

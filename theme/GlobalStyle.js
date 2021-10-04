@@ -80,8 +80,8 @@ const GlobalStyle = createGlobalStyle`
 		}
 
 		@media ${mqSm} {
-			padding-top: 6rem;
-			margin-bottom: 10rem;
+			padding-top: 4rem;
+    		margin-bottom: 4.5rem;
 		}
 	}
 
@@ -192,6 +192,34 @@ const GlobalStyle = createGlobalStyle`
 	}
 	.mb-10{
 		margin-bottom: 10rem;
+	}
+
+	.mr-025{
+		margin-right: 0.25rem;
+	}
+	.mr-05{
+		margin-right: 0.5rem;
+	}
+	.mr-075{
+		margin-right: 0.75rem;
+	}
+	.mr-1{
+		margin-right: 1rem;
+	}
+	.mr-2{
+		margin-right: 2rem;
+	}
+	.mr-3{
+		margin-right: 3rem;
+	}
+	.mr-4{
+		margin-right: 4rem;
+	}
+	.mr-5{
+		margin-right: 5rem;
+	}
+	.mr-10{
+		margin-right: 10rem;
 	}
 
 `
