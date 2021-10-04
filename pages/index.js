@@ -1,6 +1,7 @@
 import Head from 'next/head'
-import { Layout, TitleH1, TitleH2, Paragraph}  from "../components"
+import { Layout, TitleH1, TitleH2, Paragraph, SocialLink}  from "../components"
 import { parseCookies } from "../utils/parseCookies"
+import linkedinLogo from "../public/images/linkedin.svg"
 
 const Index = () => {
   return (
@@ -18,6 +19,7 @@ const Index = () => {
 			<div className="headingWrapper">
 				<TitleH1>Hello, I'm Michael 👋</TitleH1>
 				<Paragraph classes="lg">I'm a fullstack web developer at <br className="mobile"/> K Logic, and <br className="desktop"/> living in  <br className="mobile"/> Tel Aviv, Israel.</Paragraph>
+				<SocialLink href="https://www.linkedin.com/in/michael-fintisov-83232a14a/" src={linkedinLogo.src} alt="linkedin"/>
 			</div>
 
 			{/* <div className="introWrapper">
