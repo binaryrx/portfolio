@@ -3,7 +3,7 @@ import { useRouter } from 'next/dist/client/router'
 import React from "react";
 import Link from "@/components/NoScrollLink"
 import { Nav } from "./styledElements";
-import ThemeChanger from "../ThemeChanger";
+// import ThemeChanger from "@/components/ThemeChanger";
 
 import { isActiveLink } from '@/utils/isActiveLink'
 
@@ -44,7 +44,8 @@ const Navigation = () => {
                        </li>
                     ))}
                     <li>
-                        <ThemeChanger/>
+                        THEME CHANGER
+                        {/* <ThemeChanger/> */}
                     </li>
                 </ul>
             </Nav>
