@@ -31,6 +31,9 @@ const GlobalStyle = createGlobalStyle`
 		--ThemeChangerBG: #02a6f2;
 		--ThemeChangerBefore: translateY(-50%) scale(1);
 		--ThemeChangerAfter: translateY(70%);
+		--projectTitle: white;
+		--projectShadow: 10px 10px 0 rgb(0 0 0 / 10%);
+
 
 		height: 100%;
 		margin: 0;
@@ -93,12 +96,16 @@ const GlobalStyle = createGlobalStyle`
 		}
 	}
 
+
+
 	[data-theme="dark"],
 	[data-theme="dark"] body {
 		--headerBorderBottom: 1px solid rgba(75,85,99,1);
 		--ThemeChangerBG: #000;
 		--ThemeChangerBefore: translate(calc(100% + 0.05em), -50%) scale(.3);
 		--ThemeChangerAfter: translateY(calc(-100% - -0.85rem));
+		--projectShadow: 10px 10px 0 rgb(0 0 0 / 25%);
+		--projectTitle: white;
 
 		color: #fff;
 		background-color: rgba(31,41,55, 1);

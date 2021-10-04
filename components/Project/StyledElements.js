@@ -6,7 +6,7 @@ export const StyledProject = styled.li`
     font-weight:300;
     position: relative;
     overflow: hidden;
-    box-shadow: 10px 10px 0 rgb(0 0 0 / 25%);
+    box-shadow: var(--projectShadow);
 
     @media ${mqLg}, ${mqMd} {
         width: 33.75rem;
@@ -135,6 +135,7 @@ export const StyledProject = styled.li`
     }
 
     h3{
+        color: var(--projectTitle);
         @media ${mqLg}, ${mqMd} {
             font-size: 1.75rem;
             margin-bottom: 0.75rem;

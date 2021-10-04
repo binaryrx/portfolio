@@ -1,9 +1,9 @@
 import { AnimateSharedLayout, motion } from 'framer-motion'
 import { useRouter } from 'next/dist/client/router'
 import React from "react";
-import Link from "@/components/NoScrollLink"
+import NoScrollLink from "@/components/NoScrollLink"
 import { Nav } from "./styledElements";
-// import ThemeChanger from "@/components/ThemeChanger";
+import ThemeChanger from "@/components/ThemeChanger";
 
 import { isActiveLink } from '@/utils/isActiveLink'
 
@@ -28,7 +28,7 @@ const Navigation = () => {
                 <ul>
                    {links.map( ({name, href}) => (
                        <li key={name}>
-                           <Link href={href}>
+                           <NoScrollLink href={href}>
                                <a href="">
                                    {name}
                                    {isActiveLink(href, router.pathname) && (
@@ -40,12 +40,11 @@ const Navigation = () => {
                                        />
                                    )}
                                 </a>
-                           </Link>
+                           </NoScrollLink>
                        </li>
                     ))}
                     <li>
-                        THEME CHANGER
-                        {/* <ThemeChanger/> */}
+                        <ThemeChanger/>
                     </li>
                 </ul>
             </Nav>
