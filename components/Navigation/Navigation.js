@@ -3,7 +3,7 @@ import { useRouter } from 'next/dist/client/router'
 import React from "react";
 import Link from "@/components/NoScrollLink"
 import { Nav } from "./styledElements";
-import ThemeChanger from "@/components/ThemeChanger";
+import ThemeChanger from "../ThemeChanger";
 
 import { isActiveLink } from '@/utils/isActiveLink'
 
