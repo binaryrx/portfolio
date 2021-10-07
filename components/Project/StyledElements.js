@@ -12,25 +12,18 @@ export const StyledProject = styled.li`
         width: 33.75rem;
         height: 16.55rem;
         margin-bottom: 2rem;
+        font-size: 3.75rem;
     }   
 
     @media ${mqSm} {
         width: 100%;
         height: 10.75rem;
-        margin-bottom: 1.25rem;
-    }
-
-
-    @media ${mqLg}, ${mqMd} {
-        font-size: 3.75rem;
-        
-    }   
-
-    @media ${mqSm} {
+        margin-top: 2rem;
+        margin-bottom: 2rem;
         font-size: 2.15rem;
+        overflow: visible;
     }
 
-  
 
     .main{
         position: relative;
@@ -52,11 +45,23 @@ export const StyledProject = styled.li`
     .content {
         z-index: 0;
         display:grid;
-        place-content: center;
-        justify-content: flex-start;
-        max-width: 85%;
+      
         left: 50%;
         transform: translateX(-50%);
+        
+        @media ${mqLg}, ${mqMd} {
+            max-width: 85%;
+            place-content: center;
+            justify-content: flex-start;
+        }
+
+        @media ${mqSm} {
+            top: -18%;
+            place-content: start;
+            justify-content: initial;
+            max-width: 100%;
+        }
+        
     }
 
     .after{
@@ -81,34 +86,36 @@ export const StyledProject = styled.li`
             }
     }
 
-  
-    &:hover{
+    @media ${mqLg}, ${mqMd} {
+        
+        &:hover{
 
-        .before{
-            z-index: 0;
-            opacity:0;
-        }
+            .before{
+                z-index: 0;
+                opacity:0;
+            }
 
-        .content {
-            z-index: 2;
-        }
-
-        .after{
-            z-index: 1;
-            opacity: 1;
-            transform: translate3d(0,0,0);
-            transform-style: flat;
-            transition: opacity 0.15s ease-out, transform 0.25s cubic-bezier(0,.75,0,1);
-
-            &::before{
-                content: "";
-                position: absolute;
+            .content {
                 z-index: 2;
-                height: 100%;
-                width: 100%;
-                top: 0;
-                left:0;
-                background-color: rgba(0,0,0,0.5);
+            }
+
+            .after{
+                z-index: 1;
+                opacity: 1;
+                transform: translate3d(0,0,0);
+                transform-style: flat;
+                transition: opacity 0.15s ease-out, transform 0.25s cubic-bezier(0,.75,0,1);
+
+                &::before{
+                    content: "";
+                    position: absolute;
+                    z-index: 2;
+                    height: 100%;
+                    width: 100%;
+                    top: 0;
+                    left:0;
+                    background-color: rgba(0,0,0,0.5);
+                }
             }
         }
     }

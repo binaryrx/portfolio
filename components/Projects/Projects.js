@@ -3,13 +3,18 @@ import { motion } from "framer-motion"
 
 import Project from "@/components/Project";
 import Tags from "@/components/Tags";
-import { mqLgImg, mqSmImg } from "@/theme/styleVars";
+import { mqLgImg, mqSmImg, mqSm } from "@/theme/styleVars";
 
 import { StyledProjects } from "./StyledElements"
 
+let isMobile = false;
 
+if (typeof window !== 'undefined') {
+    isMobile = window.matchMedia(mqSm).matches
+}
 
-const HoverProject = {
+const HoverProject = !isMobile ? {
+    
     hidden: {
         opacity: 0,
         transition: {
@@ -26,6 +31,10 @@ const HoverProject = {
           }
     }
 }
+: {
+    hidden: { opacity: 1},
+    hover: { opacity: 1}
+}
 
 const Projects = ({projects, activeTag, setActiveTag}) => {
 
@@ -37,8 +46,6 @@ const Projects = ({projects, activeTag, setActiveTag}) => {
 
                 <Project activeTag={activeTag} key={i}>
                     
-                    <div className="bar"></div>
-                    {console.log("project render")}
                     <motion.div className="main" initial="hidden" whileHover="hover" animate="hidden">
 
                         <div className="before">
@@ -49,14 +56,14 @@ const Projects = ({projects, activeTag, setActiveTag}) => {
                             </picture>
                         </div>
 
-                        <motion.div variants={HoverProject} className="content" >
+                        <motion.div variants={HoverProject} className="content">
                             <h3>
                                 <a href={url} target="_blank" rel="noopener noreferrer">{title}</a>
                             </h3>
-                            <Tags tags={tags} classes="sm" activeTag={activeTag} setActiveTag={setActiveTag} anim="true"/>
+                            <Tags tags={tags} classes="sm desktopFlex" activeTag={activeTag} setActiveTag={setActiveTag} anim="true"/>
                         </motion.div>
 
-                        <div className="after">
+                        <div className="after desktop">
                             <picture>
                                 <source srcSet={thumb.thumb_after_webp.src} type="image/webp"/>
                                 <source srcSet={thumb.thumb_after_jpg.src} type="image/jpg"/>

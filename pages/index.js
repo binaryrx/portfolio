@@ -1,9 +1,14 @@
 import Head from 'next/head'
 import { Layout, TitleH1, TitleH2, Paragraph, SocialLink}  from "../components"
-import linkedinLogo from "../public/images/linkedin.svg"
-import githubLogo from "../public/images/github.svg"
+import LinkedinLogo from "../public/images/linkedin.svg"
+import GithubLogo from "../public/images/github.svg"
+
+// console.log(linkedinLogo)
 
 const Index = () => {
+
+
+
   return (
     <>
       <Head>
@@ -18,13 +23,13 @@ const Index = () => {
 
 			<div className="headingWrapper">
 				<TitleH1>Hello, I'm Michael 👋</TitleH1>
-				<Paragraph classes="lg mb-05">I'm a fullstack web developer at <br className="mobile"/> K Logic, and <br className="desktop"/> living in  <br className="mobile"/> Tel Aviv, Israel.</Paragraph>
+				<Paragraph classes="lg mb-05">I'm a fullstack web developer at <br className="mobile"/> K Logic <br className="desktop"/> living in  <br className="mobile"/> Tel Aviv, Israel.</Paragraph>
 				<SocialLink href="https://www.linkedin.com/in/michael-fintisov-83232a14a/" alt="linkedin" className="mr-075"> 
-					<img src={linkedinLogo.src}/>
+					<LinkedinLogo fill="rgba(255,255,255,0.75)" />
 				</SocialLink>
 
 				<SocialLink href="https://github.com/binaryrx/" alt="github">
-					<img src={githubLogo.src}/>
+					<GithubLogo fill="rgba(255,255,255,0.75)"/>
 				</SocialLink>
 			</div>
 

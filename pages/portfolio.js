@@ -6,7 +6,7 @@ import projects from "../constants/projects"
 
 const Portfolio = () => {
 
-	const tags =  ["all","html5", "css", "scss", "javascript", "react", "php", "mysql", "wordpress", "node.js","webpack 5", "gulp.js", "parcel.js"]
+	const tags =  ["all","html5", "css", "scss", "javascript", "react", "php", "mysql", "wordpress","webpack 5", "gulp.js", "parcel.js"]
 
 
 	const [ activeTag, setActiveTag ] = useState("all");
@@ -31,7 +31,7 @@ const Portfolio = () => {
 				<TitleH1 classes="mb-05">Projects 📚</TitleH1>
 				<Paragraph classes="md mb-1">A selection of projects I've worked on, during my career as a software developer.</Paragraph>
 
-				<Tags tags={tags} activeTag={activeTag} setActiveTag={setActiveTag} classes="mb-075"/>
+				<Tags tags={tags} activeTag={activeTag} setActiveTag={setActiveTag} classes="mb-075 desktopFlex"/>
 
 
 				<Projects projects={filteredProjects} activeTag={activeTag} setActiveTag={setActiveTag}/>

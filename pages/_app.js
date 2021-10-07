@@ -28,7 +28,7 @@ function Portfolio({ Component, pageProps, router }) {
 
 	return (
 		<>
-			<ThemeProvider>
+			<ThemeProvider defaultTheme="dark">
 				<GlobalStyle />
 					<Header />
 					<AnimatePresence exitBeforeEnter initial={false} onExitComplete={() => window.scrollTo(0, 0)}>

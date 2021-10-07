@@ -155,6 +155,15 @@ const GlobalStyle = createGlobalStyle`
 			display: block;
 		}
 	}
+	.desktopFlex{
+		@media ${mqSm} {
+			display: none;
+		}
+
+		@media ${mqLg},${mqMd} {
+			display: flex;
+		}
+	}
 
 	.mobile{
 		@media ${mqSm} {
