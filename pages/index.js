@@ -36,7 +36,7 @@ const Index = () => {
 			<div className="introWrapper">
 				<TitleH2>About</TitleH2>
 				<Paragraph classes="md text-grey ">
-				I spend most of my time as a fullstack developer on K Logic's clients websites using HTML, CSS, JS and PHP. I'm currently experimenting with Next.js, Node.js and Docker.
+				I spend most of my time as a fullstack developer on K Logic's clients websites using mostly HTML, CSS, JS and PHP. I'm currently experimenting with Next.js, Node.js and Docker.
 				</Paragraph>
 			</div>
 		  </div>
