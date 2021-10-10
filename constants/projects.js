@@ -139,8 +139,8 @@
             thumb_after_jpg: msd_young_dr_after_jpg,
             thumb_after_webp: msd_young_dr_after_webp,
         },
-        title: "GDH TLV",
-        description: "Direct Insurance and MSI's Global Digital Hub",
+        title: "MSD young doctor questionnaire",
+        description: "MSD young doctor questionnaire",
         tags: ["html5", "scss", "javascript", "react", "webpack 5"],
     },
     {
