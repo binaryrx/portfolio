@@ -29,7 +29,7 @@ export default class MyDocument extends Document {
   }
 
   render() {
-      const GA_MEASUREMENT_ID = "";
+      const GA_MEASUREMENT_ID = "GTM-W42NBWN";
 
       return(
         <Html>
