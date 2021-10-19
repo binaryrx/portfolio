@@ -18,7 +18,9 @@ function Portfolio({ Component, pageProps, router }) {
 
 			WebFont.load({
 				google: {
-					families: [`Roboto:300,400,500,700`]
+					families: [
+						`Roboto:300,400,500,700&display=swap`
+					]
 				}
 			});
 		}
